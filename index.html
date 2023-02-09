@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Library</title>
 </head>
@@ -13,19 +13,19 @@
         <h1>Library</h1>
     </nav>
     <main>
-        <form>
+        <form id="new-book-form">
             <label for="book-title-input">Title:</label>
-            <input type="text" id="book-title-input">
+            <input type="text" id="book-title-input" name="book-title-input">
             <label for="book-author-input">Author: </label>
-            <input type="text" id="book-author-input">
+            <input type="text" id="book-author-input" name="book-author-input">
             <label for="book-pages-input">&#35; of pages: </label>
-            <input type="text" id="book-pages-input">
+            <input type="text" id="book-pages-input" name="book-pages-input">
             <label for="book-read-input">Read?</label>
-            <input type="checkbox" id="book-read-input">
-            <button type="submit">Add new book</button>
+            <input type="checkbox" id="book-read-input" name="book-read-input">
+            <button type="submit" id="new-book-btn">Add new book</button>
         </form>
         <hr>
-        <table class="book-library">
+        <table id="book-library">
             <thead>
                 <th>Title</th>
                 <th>Author</th>
