@@ -17,7 +17,7 @@ function addNewBookToLibrary(event){
 }
 
 function displayAllBooks(){
-    const bookTable = document.getElementById("book-library");
+    const bookTable = document.getElementById("book-library-list");
     for (book of myLibrary){
         let bookRow = createBookRow(book);
         bookTable.appendChild(bookRow);
@@ -25,7 +25,7 @@ function displayAllBooks(){
 }
 
 function updateDisplayedBooks(){
-    const bookTable = document.getElementById("book-library");
+    const bookTable = document.getElementById("book-library-list");
     book = myLibrary[myLibrary.length - 1];
     let bookRow = createBookRow(book);
     bookTable.appendChild(bookRow);
@@ -92,7 +92,8 @@ function newBookFromDataObject(dataObject){
     return newBook;
 }
 
-const newBookForm = document.getElementById("new-book-form");
 
+displayAllBooks();
+const newBookForm = document.getElementById("new-book-form");
 newBookForm.addEventListener('submit', addNewBookToLibrary);
 
