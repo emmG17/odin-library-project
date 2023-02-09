@@ -15,9 +15,9 @@
     <main>
         <form id="new-book-form">
             <label for="book-title-input">Title:</label>
-            <input type="text" id="book-title-input" name="book-title-input">
+            <input type="text" id="book-title-input" name="book-title-input" required>
             <label for="book-author-input">Author: </label>
-            <input type="text" id="book-author-input" name="book-author-input">
+            <input type="text" id="book-author-input" name="book-author-input" required>
             <label for="book-pages-input">&#35; of pages: </label>
             <input type="text" id="book-pages-input" name="book-pages-input">
             <label for="book-read-input">Read?</label>
@@ -32,7 +32,7 @@
                 <th>Pages</th>
                 <th>Read</th>
             </thead>
-            <tbody>
+            <tbody id="book-library-list">
                 <tr class="book">
                     <td class="book-title">Lord of the Rings</td>
                     <td class="book-autor">J.R.R Tolkien</td>
